@@ -1,0 +1,11 @@
+[Unit]
+Description=Sample logging from Python to Systemd
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/python-systemd-log/pythonlog.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
