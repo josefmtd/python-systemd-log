@@ -1,13 +1,15 @@
+#!/usr/bin/python3
+
 import logging
 import random
 import time
-from systemd.journal import JournaldLogHandler
+from systemd.journal import JournalHandler
 
 # get an instance of the logger object this module will use
 logger = logging.getLogger(__name__)
 
 # instantiate the JournaldLogHandler to hook into systemd
-journald_handler = JournaldLogHandler()
+journald_handler = JournalHandler()
 
 # set a formatter to include the level name
 journald_handler.setFormatter(logging.Formatter(
